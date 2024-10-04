@@ -22,7 +22,7 @@ import org.bukkit.Bukkit;
 public class VersionUtils {
 
     public static double getVersion() {
-        final String version = Bukkit.getServer().getClass().getPackage().getName().split("\\.")[4];
+        final String version = Bukkit.getServer().getClass().getPackage().getName().split("\\.");
         final String[] parts = version.split("_");
         return Double.parseDouble(parts[0].substring(1) + "." + parts[1]);
     }
